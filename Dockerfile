@@ -7,3 +7,8 @@ RUN apt-get update \
   && apt-get install cron
 
 USER seluser
+
+COPY bk.sh /home/seluser/bk.sh
+
+RUN chmod +x /home/seluser/bk.sh
+
