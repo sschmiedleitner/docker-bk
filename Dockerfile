@@ -10,8 +10,9 @@ RUN apt-get update \
   && apt-get install nano \
   && apt-get install cron \
   && chmod +x /home/seluser/bk.sh \
+  && chmod +x /home/seluser/eroom.sh \
   && chmod +x /home/seluser/linux_386_chrome-remote-reload \
-  && chown seluser:seluser /home/seluser/bk.sh
+  && chown seluser:seluser /home/seluser/bk.sh \
   && chown seluser:seluser /home/seluser/eroom.sh
 
 USER seluser
