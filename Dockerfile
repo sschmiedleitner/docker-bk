@@ -12,5 +12,6 @@ RUN apt-get update \
   && chmod +x /home/seluser/bk.sh \
   && chmod +x /home/seluser/linux_386_chrome-remote-reload \
   && chown seluser:seluser /home/seluser/bk.sh
+  && chown seluser:seluser /home/seluser/eroom.sh
 
 USER seluser
