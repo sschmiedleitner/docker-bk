@@ -1,6 +1,6 @@
 FROM selenium/standalone-chrome-debug
 
-COPY bk.sh /home/seluser/bk.sh
+COPY bk.sh eroom.sh /home/seluser/
 
 ADD https://github.com/lvancrayelynghe/chrome-remote-reload/releases/download/pre-release/linux_386_chrome-remote-reload /home/seluser
 
