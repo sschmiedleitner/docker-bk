@@ -2,6 +2,7 @@
 secsSinceMidnight=$(( $(date +%s) - $(date -d '00:00:00' +%s) ))
 echo $secsSinceMidnight
 google-chrome --remote-debugging-port=9222 http://www.rossi-training.at/eroom.html &
+PID=$!
 
 while [ $secsSinceMidnight -lt 50000 ]
 do
@@ -10,3 +11,5 @@ do
   /home/seluser/linux_386_chrome-remote-reload
   echo $secsSinceMidnight
 done
+
+kill $PID
