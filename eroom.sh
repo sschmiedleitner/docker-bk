@@ -12,4 +12,4 @@ do
   echo $secsSinceMidnight
 done
 
-kill $PID
+kill -INT $PID
