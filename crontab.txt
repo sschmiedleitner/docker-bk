@@ -1,1 +1,3 @@
-* * * * * /home/seluser/eroom.sh
+TZ=Europe/Berlin
+24 8 * * tue /home/seluser/eroom.sh
+* * * * * /bin/date >> /tmp/test.txt
