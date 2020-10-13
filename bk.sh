@@ -1,12 +1,12 @@
-#sleep $(( ( RANDOM % 10 )  + 1 ))s
-secsSinceMidnight=$(( $(date +%s) - $(date -d '00:00:00' +%s) ))
-echo $secsSinceMidnight
+start=$(date +%s)
+current=$(date +%s)
+echo $start
 
-while [ $secsSinceMidnight -lt 50000 ]
+# run for min 5h
+while [ $(($current - $start)) -lt 20000 ]
 do
   sleep $(( ( RANDOM % 10 )  + 1 ))m
-  secsSinceMidnight=$(( $(date +%s) - $(date -d '00:00:00' +%s) ))
+  current=$(date +%s)
   /home/seluser/linux_386_chrome-remote-reload
-  echo $secsSinceMidnight
+  echo $(($current - $start))
 done
-
